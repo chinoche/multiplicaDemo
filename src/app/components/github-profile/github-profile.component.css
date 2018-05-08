@@ -1,0 +1,14 @@
+.profile-container{
+  max-width: 30%;
+}
+.profile-card {
+  max-width: 400px;
+}
+
+.profile-header-image {
+  background-image: url('https://www.shareicon.net/data/256x256/2017/06/21/887457_logo_512x512.png');
+  background-size: cover;
+}
+.repos-container{
+  max-width: 70%;
+}

@@ -1,0 +1,18 @@
+<div class="search">
+  <div class="search-left-panel"></div>
+  <div class="search-right-panel">
+    <div class="search-form">
+      <mat-card>
+        <h1>Bienvenido, favor de buscar al usuario de github</h1>
+        <form name="form" (ngSubmit)="f.form.valid && search(model.username)" #f="ngForm" novalidate>
+          <mat-input-container class="search-form-fullWidth">
+            <input matInput type="email" placeholder="Username" name="username" [(ngModel)]="model.username" #username="ngModel" required>
+          </mat-input-container>
+        </form>
+        <div>
+          <button mat-raised-button color="primary" (click)="search(model.username)">Buscar</button>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.search {
+  height: 100%;
+  overflow: hidden;
+  width: 100% !important;
+  margin: 0 !important;
+}
+.search-left-panel {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #03A9F4 url("https://cdn-images-1.medium.com/max/2000/1*CmjmgiI3Sr6oByNZ81pkhQ.jpeg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.search-right-panel {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #ffffff;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.search-form {
+  width: 75%;
+  height: 50%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.search-form-fullWidth {
+  width: 100%;
+}

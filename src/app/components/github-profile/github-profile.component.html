@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col"><mat-card class="profile-card">
+      <mat-card-header>
+        <div mat-card-avatar class="profile-header-image"></div>
+        <mat-card-title>{{ user.login }}</mat-card-title>
+        <mat-card-subtitle>{{ user.html_url }}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="user.avatar_url" alt="Github Avatar">
+      <mat-card-content>
+        <p>
+          Número de erpositorios públicos: {{ user.public_repos }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="searchAnother()">Buscar otro usuario</button>
+      </mat-card-actions>
+    </mat-card></div>
+    <div class="col">
+      <app-github-repos [url]="user.repos_url"></app-github-repos>
+    </div>
+  </div>
+</div>
