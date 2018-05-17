@@ -20,7 +20,6 @@ export class IssuesViewerComponent implements OnInit {
     this.repoInfo = this.appService.get('repoInfo');
     this.githubService.getContent(this.repoInfo.issues_url).subscribe((response) => {
       this.issues = response;
-      console.warn(response);
     });
   }
 
