@@ -15,7 +15,7 @@ export class GithubService {
     return this.http.get(`${ BASE_URL }/users/${user}`);
   }
 
-  getRepos(url) {
+  getContent(url) {
     return this.http.get(url);
   }
 

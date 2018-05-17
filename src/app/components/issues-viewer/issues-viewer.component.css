@@ -1,0 +1,8 @@
+.issues-card {
+  max-width: 100%;
+}
+
+.issues-header-image {
+  background-image: url('https://www.shareicon.net/data/256x256/2017/06/21/887457_logo_512x512.png');
+  background-size: cover;
+}

@@ -18,8 +18,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SearchUserComponent } from './components/search-user/search-user.component';
 import { GithubProfileComponent } from './components/github-profile/github-profile.component';
 import { GithubReposComponent } from './components/github-repos/github-repos.component';
-import {AppService} from './app.service';
-import {NotificationService} from './services/notification/notification.service';
+import { AppService } from './app.service';
+import { NotificationService } from './services/notification/notification.service';
+import { UtilsService } from './services/utils/utils.service';
+import { IssuesViewerComponent } from './components/issues-viewer/issues-viewer.component';
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import {NotificationService} from './services/notification/notification.service'
     DashboardComponent,
     SearchUserComponent,
     GithubProfileComponent,
-    GithubReposComponent
+    GithubReposComponent,
+    IssuesViewerComponent
   ],
   imports: [
     AppMaterialModule,
@@ -42,7 +45,8 @@ import {NotificationService} from './services/notification/notification.service'
     AuthGuard,
     AppService,
     GithubService,
-    NotificationService
+    NotificationService,
+    UtilsService
   ],
   bootstrap: [AppComponent]
 })

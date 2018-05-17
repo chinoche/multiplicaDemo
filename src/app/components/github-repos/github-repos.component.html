@@ -1,9 +1,22 @@
-<mat-list style="width: 100%">
-  <h3 matSubheader></h3>
-  <mat-list-item *ngFor="let repo of repos">
-    <mat-icon matListIcon>rowing</mat-icon>
-    <h4 matLine style="min-width: 40%">{{repo.name}}</h4>
-    <p matline style="min-width: 10%"> {{repo.created_at | date}} </p>
-    <a matline [href]="repo.html_url" style="min-width: 400px"> Ir al repositorio </a>
-  </mat-list-item>
-</mat-list>
+<div>
+  <table id="table" class="table table-hover table-mc-light-blue">
+    <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fecha de creación</th>
+      <th>Tiene Issues</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let repo of repos">
+      <td>{{repo.name}}</td>
+      <td>{{repo.created_at | date}}</td>
+      <td>
+        <button mat-raised-button color="primary" (click)="navigateToIssues(repo)">
+          Ver issues
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

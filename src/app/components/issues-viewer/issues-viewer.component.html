@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <mat-card class="issues-card">
+        <mat-card-header>
+          <div mat-card-avatar class="issues-header-image"></div>
+          <mat-card-title><h3>Issues para el repositorio: {{ repoInfo.name }}</h3></mat-card-title>
+          <mat-card-subtitle><a [href]="repoInfo.html_url">Ir al repo</a></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div *ngIf="issues && issues.length > 0">
+            <div class="container-fluid" *ngFor="let issue of issues">
+              <div class="row">
+                <table id="table" class="table table-hover table-mc-light-blue">
+                  <tbody>
+                  <tr>
+                    <th>Título</th>
+                    <td>{{ issue.title}}</td>
+                  </tr>
+                  <tr>
+                    <th>Número del issue</th>
+                    <td>{{ issue.number}}</td>
+                  </tr>
+                  <tr>
+                    <th>Fecha de creación</th>
+                    <td>{{ issue.created_at | date}}</td>
+                  </tr>
+                  <tr>
+                    <th>Url del issue</th>
+                    <td><a [href]="issue.html_url">Ir al sitio del issue</a></td>
+                  </tr>
+                  <tr>
+                    <th>Reportado por</th>
+                    <td><a [href]="issue.user.html_url">{{ issue.user.login }} </a></td>
+                  </tr>
+                  <tr>
+                    <th>Estado</th>
+                    <td>{{ issue.state }}</td>
+                  </tr>
+                  <tr>
+                    <th>Descripción</th>
+                    <td>{{ issue.body }}</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="issues && issues.length === 0">
+            El repositorio seleccionado no cuenta con issues registrados
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
